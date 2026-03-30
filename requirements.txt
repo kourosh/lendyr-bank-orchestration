@@ -1,0 +1,2 @@
+# watsonx Orchestrate ADK
+ibm-watson-orchestrate>=1.0.0

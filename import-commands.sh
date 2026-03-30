@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Lendyr Bank Multi-Agent Orchestration - Import Script
-# This script imports all agents into watsonx Orchestrate using the CLI
+# This script imports all Python agents into watsonx Orchestrate using the CLI
 
 echo "=========================================="
-echo "Lendyr Bank Agent Import Script"
+echo "Lendyr Bank Agent Import Script (Python)"
 echo "=========================================="
 echo ""
 
@@ -16,7 +16,7 @@ echo "----------------------------------------"
 
 # Import Account Balance Checker
 echo "Importing Account Balance Checker..."
-orchestrate agents import -f agents/account-balance-checker.yaml
+orchestrate agents import -f agents/account_balance_checker.py
 if [ $? -eq 0 ]; then
     echo "✓ Account Balance Checker imported successfully"
 else
@@ -26,7 +26,7 @@ echo ""
 
 # Import Debit Card Activator
 echo "Importing Debit Card Activator..."
-orchestrate agents import -f agents/debit-card-activator.yaml
+orchestrate agents import -f agents/debit_card_activator.py
 if [ $? -eq 0 ]; then
     echo "✓ Debit Card Activator imported successfully"
 else
@@ -36,7 +36,7 @@ echo ""
 
 # Import Money Transfer Agent
 echo "Importing Money Transfer Agent..."
-orchestrate agents import -f agents/money-transfer-agent.yaml
+orchestrate agents import -f agents/money_transfer_agent.py
 if [ $? -eq 0 ]; then
     echo "✓ Money Transfer Agent imported successfully"
 else
@@ -49,7 +49,7 @@ echo "----------------------------------------"
 
 # Import Orchestrator (must be last to ensure collaborators exist)
 echo "Importing Lendyr Bank Orchestrator..."
-orchestrate agents import -f agents/orchestrator-agent.yaml
+orchestrate agents import -f agents/lendyr_bank_orchestrator.py
 if [ $? -eq 0 ]; then
     echo "✓ Orchestrator imported successfully"
 else
