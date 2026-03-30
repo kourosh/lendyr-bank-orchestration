@@ -1,0 +1,54 @@
+apiVersion: orchestrate.ibm.com/v1
+kind: Flow
+metadata:
+  name: lendyr-bank-service-flow
+  description: Main orchestration flow for Lendyr Bank customer service
+spec:
+  displayName: "Lendyr Bank Service Flow"
+  description: "Orchestrates customer service interactions across multiple specialized agents"
+  
+  entryPoint: orchestrator-agent
+  
+  agents:
+    - name: orchestrator-agent
+      type: orchestrator
+      handoffRules:
+        - condition: "customer selects option 1 or mentions account balance or status"
+          targetAgent: account-balance-checker
+          
+        - condition: "customer selects option 2 or mentions card activation"
+          targetAgent: debit-card-activator
+          
+        - condition: "customer selects option 3 or mentions money transfer"
+          targetAgent: money-transfer-agent
+    
+    - name: account-balance-checker
+      type: specialist
+      returnToOrchestrator: true
+      
+    - name: debit-card-activator
+      type: specialist
+      returnToOrchestrator: true
+      
+    - name: money-transfer-agent
+      type: specialist
+      returnToOrchestrator: true
+  
+  conversationFlow:
+    - step: greeting
+      agent: orchestrator-agent
+      action: present_options
+      
+    - step: route_request
+      agent: orchestrator-agent
+      action: handoff_to_specialist
+      
+    - step: handle_request
+      agent: specialist
+      action: process_customer_request
+      
+    - step: completion
+      agent: specialist
+      action: confirm_and_offer_more_help
+
+# Made with Bob
