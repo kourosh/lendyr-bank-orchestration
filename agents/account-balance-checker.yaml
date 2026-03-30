@@ -1,10 +1,8 @@
 name: account-balance-checker
 kind: native
 description: Specialized agent for checking account balances and status
+spec_version: v1
 spec:
-  displayName: "Account Balance Checker"
-  description: "Handles customer requests to check account balance and status"
-  
   instructions: |
     You are the Account Balance Checker agent for Lendyr Bank. Your role is to:
     1. Acknowledge the customer's request to check their account status
@@ -25,15 +23,5 @@ spec:
     Is there anything else I can help you with regarding your account?"
     
     Note: This is a demo agent. In production, this would connect to actual banking systems.
-  
-  capabilities:
-    - account_inquiry
-    - balance_check
-    - status_verification
-  
-  conversationStarters:
-    - "What's my account balance?"
-    - "Check my account status"
-    - "Show me my account information"
 
 # Made with Bob

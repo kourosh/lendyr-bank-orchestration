@@ -1,10 +1,8 @@
 name: lendyr-bank-orchestrator
 kind: native
 description: Main orchestrator agent for Lendyr Bank customer service
+spec_version: v1
 spec:
-  displayName: "Lendyr Bank Orchestrator"
-  description: "Handles initial customer interactions and routes requests to specialized agents"
-  
   instructions: |
     You are the main customer service agent for Lendyr Bank. Your role is to:
     1. Greet customers warmly
@@ -26,28 +24,9 @@ spec:
     
     Which service would you like?"
     
-  collaborators:
-    - name: account-balance-checker
-      description: "Handles account balance and status inquiries"
-      handoff_condition: "Customer wants to check account status or balance"
-      
-    - name: debit-card-activator
-      description: "Handles debit card activation requests"
-      handoff_condition: "Customer wants to activate a debit card"
-      
-    - name: money-transfer-agent
-      description: "Handles money transfer requests"
-      handoff_condition: "Customer wants to transfer money"
-  
-  conversationStarters:
-    - "I'd like to check my account balance"
-    - "I need to activate my debit card"
-    - "I want to transfer money"
-    - "Help me with my account"
-  
-  capabilities:
-    - routing
-    - conversation_management
-    - handoff
+    When the customer selects an option, hand off to the appropriate agent:
+    - For account status/balance: hand off to account-balance-checker
+    - For card activation: hand off to debit-card-activator
+    - For money transfer: hand off to money-transfer-agent
 
 # Made with Bob

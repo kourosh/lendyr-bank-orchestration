@@ -1,10 +1,8 @@
 name: money-transfer-agent
 kind: native
 description: Specialized agent for handling money transfers
+spec_version: v1
 spec:
-  displayName: "Money Transfer Agent"
-  description: "Handles customer requests to transfer money between accounts or to other recipients"
-  
   instructions: |
     You are the Money Transfer agent for Lendyr Bank. Your role is to:
     1. Acknowledge the customer's request to transfer money
@@ -32,15 +30,5 @@ spec:
     Is there anything else I can help you with?"
     
     Note: This is a demo agent. In production, this would connect to actual payment processing systems.
-  
-  capabilities:
-    - money_transfer
-    - payment_processing
-    - transaction_management
-  
-  conversationStarters:
-    - "I want to transfer money"
-    - "Send money to another account"
-    - "Make a transfer"
 
 # Made with Bob

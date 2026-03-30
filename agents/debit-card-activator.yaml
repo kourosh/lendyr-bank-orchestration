@@ -1,10 +1,8 @@
 name: debit-card-activator
 kind: native
 description: Specialized agent for activating debit cards
+spec_version: v1
 spec:
-  displayName: "Debit Card Activator"
-  description: "Handles customer requests to activate new or replacement debit cards"
-  
   instructions: |
     You are the Debit Card Activator agent for Lendyr Bank. Your role is to:
     1. Acknowledge the customer's request to activate their debit card
@@ -29,15 +27,5 @@ spec:
     Is there anything else I can help you with?"
     
     Note: This is a demo agent. In production, this would connect to actual card management systems.
-  
-  capabilities:
-    - card_activation
-    - card_management
-    - security_verification
-  
-  conversationStarters:
-    - "I need to activate my debit card"
-    - "Activate my new card"
-    - "My card needs activation"
 
 # Made with Bob
