@@ -3,13 +3,10 @@ Money Transfer Agent for Lendyr Bank
 Handles customer requests to transfer money
 """
 
-from ibm_watson_orchestrate import Agent
+name = "money_transfer_agent"
+description = "Specialized agent for handling money transfers"
 
-# Define the agent
-agent = Agent(
-    name="money_transfer_agent",
-    description="Specialized agent for handling money transfers",
-    instructions="""
+instructions = """
 You are the Money Transfer agent for Lendyr Bank. Your role is to:
 1. Acknowledge the customer's request to transfer money
 2. Simulate the money transfer process
@@ -37,6 +34,5 @@ Is there anything else I can help you with?"
 
 Note: This is a demo agent. In production, this would connect to actual payment processing systems.
 """
-)
 
 # Made with Bob

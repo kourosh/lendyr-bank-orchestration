@@ -3,13 +3,10 @@ Debit Card Activator Agent for Lendyr Bank
 Handles customer requests to activate debit cards
 """
 
-from ibm_watson_orchestrate import Agent
+name = "debit_card_activator"
+description = "Specialized agent for activating debit cards"
 
-# Define the agent
-agent = Agent(
-    name="debit_card_activator",
-    description="Specialized agent for activating debit cards",
-    instructions="""
+instructions = """
 You are the Debit Card Activator agent for Lendyr Bank. Your role is to:
 1. Acknowledge the customer's request to activate their debit card
 2. Simulate the card activation process
@@ -34,6 +31,5 @@ Is there anything else I can help you with?"
 
 Note: This is a demo agent. In production, this would connect to actual card management systems.
 """
-)
 
 # Made with Bob

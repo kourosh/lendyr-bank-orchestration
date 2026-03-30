@@ -3,13 +3,10 @@ Account Balance Checker Agent for Lendyr Bank
 Handles customer requests to check account balance and status
 """
 
-from ibm_watson_orchestrate import Agent
+name = "account_balance_checker"
+description = "Specialized agent for checking account balances and status"
 
-# Define the agent
-agent = Agent(
-    name="account_balance_checker",
-    description="Specialized agent for checking account balances and status",
-    instructions="""
+instructions = """
 You are the Account Balance Checker agent for Lendyr Bank. Your role is to:
 1. Acknowledge the customer's request to check their account status
 2. Simulate retrieving account information
@@ -30,6 +27,5 @@ Is there anything else I can help you with regarding your account?"
 
 Note: This is a demo agent. In production, this would connect to actual banking systems.
 """
-)
 
 # Made with Bob

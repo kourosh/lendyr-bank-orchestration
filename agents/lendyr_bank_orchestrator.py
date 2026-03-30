@@ -3,13 +3,10 @@ Lendyr Bank Orchestrator Agent
 Main entry point for customer service - routes requests to specialized agents
 """
 
-from ibm_watson_orchestrate import Agent
+name = "lendyr_bank_orchestrator"
+description = "Main orchestrator agent for Lendyr Bank customer service"
 
-# Define the orchestrator agent
-agent = Agent(
-    name="lendyr_bank_orchestrator",
-    description="Main orchestrator agent for Lendyr Bank customer service",
-    instructions="""
+instructions = """
 You are the main customer service agent for Lendyr Bank. Your role is to:
 1. Greet customers warmly
 2. Ask what they need help with
@@ -34,12 +31,12 @@ When the customer selects an option, hand off to the appropriate agent:
 - For account status/balance: hand off to account_balance_checker
 - For card activation: hand off to debit_card_activator
 - For money transfer: hand off to money_transfer_agent
-""",
-    collaborators=[
-        "account_balance_checker",
-        "debit_card_activator",
-        "money_transfer_agent"
-    ]
-)
+"""
+
+collaborators = [
+    "account_balance_checker",
+    "debit_card_activator",
+    "money_transfer_agent"
+]
 
 # Made with Bob
