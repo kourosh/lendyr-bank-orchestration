@@ -1,4 +1,4 @@
-name: debit-card-activator
+name: debit_card_activator
 kind: native
 description: Specialized agent for activating debit cards
 spec_version: v1

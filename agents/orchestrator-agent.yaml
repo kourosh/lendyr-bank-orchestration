@@ -1,4 +1,4 @@
-name: lendyr-bank-orchestrator
+name: lendyr_bank_orchestrator
 kind: native
 description: Main orchestrator agent for Lendyr Bank customer service
 spec_version: v1
@@ -25,8 +25,8 @@ spec:
     Which service would you like?"
     
     When the customer selects an option, hand off to the appropriate agent:
-    - For account status/balance: hand off to account-balance-checker
-    - For card activation: hand off to debit-card-activator
-    - For money transfer: hand off to money-transfer-agent
+    - For account status/balance: hand off to account_balance_checker
+    - For card activation: hand off to debit_card_activator
+    - For money transfer: hand off to money_transfer_agent
 
 # Made with Bob

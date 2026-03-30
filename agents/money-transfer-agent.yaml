@@ -1,4 +1,4 @@
-name: money-transfer-agent
+name: money_transfer_agent
 kind: native
 description: Specialized agent for handling money transfers
 spec_version: v1
