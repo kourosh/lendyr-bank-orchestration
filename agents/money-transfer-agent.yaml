@@ -1,8 +1,6 @@
-apiVersion: orchestrate.ibm.com/v1
-kind: Agent
-metadata:
-  name: money-transfer-agent
-  description: Specialized agent for handling money transfers
+name: money-transfer-agent
+kind: native
+description: Specialized agent for handling money transfers
 spec:
   displayName: "Money Transfer Agent"
   description: "Handles customer requests to transfer money between accounts or to other recipients"

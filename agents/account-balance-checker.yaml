@@ -1,8 +1,6 @@
-apiVersion: orchestrate.ibm.com/v1
-kind: Agent
-metadata:
-  name: account-balance-checker
-  description: Specialized agent for checking account balances and status
+name: account-balance-checker
+kind: native
+description: Specialized agent for checking account balances and status
 spec:
   displayName: "Account Balance Checker"
   description: "Handles customer requests to check account balance and status"

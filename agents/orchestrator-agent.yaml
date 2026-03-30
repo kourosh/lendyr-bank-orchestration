@@ -1,8 +1,6 @@
-apiVersion: orchestrate.ibm.com/v1
-kind: Agent
-metadata:
-  name: lendyr-bank-orchestrator
-  description: Main orchestrator agent for Lendyr Bank customer service
+name: lendyr-bank-orchestrator
+kind: native
+description: Main orchestrator agent for Lendyr Bank customer service
 spec:
   displayName: "Lendyr Bank Orchestrator"
   description: "Handles initial customer interactions and routes requests to specialized agents"

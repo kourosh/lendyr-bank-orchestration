@@ -1,8 +1,6 @@
-apiVersion: orchestrate.ibm.com/v1
-kind: Agent
-metadata:
-  name: debit-card-activator
-  description: Specialized agent for activating debit cards
+name: debit-card-activator
+kind: native
+description: Specialized agent for activating debit cards
 spec:
   displayName: "Debit Card Activator"
   description: "Handles customer requests to activate new or replacement debit cards"
